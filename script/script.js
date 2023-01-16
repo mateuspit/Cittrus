@@ -42,6 +42,12 @@ function decrementar(thisDecButton){
     }
 
     // changeNumber.innerHTML = "T1";
+
+    if(bottle5 == 0 || bottle2 == 0 || bottle1 == 0 || bottle500 == 0 || bottle300 == 0){
+        // console.log(document.querySelector(".selectOrder"));
+        const disableButton = document.querySelector(".selectOrder")
+        disableButton.disabled = true;
+    }
 }
 
 function incrementar(thisInButton){
@@ -82,4 +88,11 @@ function incrementar(thisInButton){
     }
 
     // changeNumber.innerHTML = "T2";
+
+    if(bottle5 > 0 || bottle2 > 0 || bottle1 > 0 || bottle500 > 0 || bottle300 > 0){
+        // console.log(document.querySelector(".selectOrder"))
+        const enableButton = document.querySelector(".selectOrder")
+        enableButton.disabled = false;
+    }
 }
+
