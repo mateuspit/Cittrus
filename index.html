@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Driven Eats</title>
+
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <style> @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); </style>
+
+    </head>
+    <body>
+        <div class="site">
+            <div class="firstLayer">
+                <header>
+                    <h1>DrivenEats</h1>
+                    <h2>Sua comida em 6 minutos</h2>
+                </header> <!--FIM DO MENU SUPERIOR-->
+                <main>
+                    <h1>Escolha a garrafa que deseja:</h1>
+                    <section class="optionMainCourse">
+                        <div class="option">
+                            <div class="optionInfo">
+                                <img src="img/bottle5L.jpeg" width="80px">
+                                <h2>Garrafa com 5 litros</h2>
+                                <h3>Nossa maior garrafa disponivel!</h3>
+                                <p>R$ 35,90</p>
+                            </div>
+                        </div>
+
+                        <div class="button">
+                            <div class="buttondec">
+                                <button class="l5 big decrementar" onclick="decrementar(this)">
+                                    -
+                                </button>
+                            </div>
+
+                            <div class="big valor">0</div>
+
+                            <div class="buttoninc">
+                                <button  class="l5 big incrementar" onclick="incrementar(this)">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+                        
+
+                    </section> <!-- FIM DO PRATO PRINCIPAL-->
+
+                    <section class="optionMainCourse">
+                        <div class="option">
+                            <div class="optionInfo">
+                                <img src="img/bottle2L.jpeg" width="80px">
+                                <h2>Garrafa com 2 litros</h2>
+                                <h3>Ótima opção para refeição</h3>
+                                <p>R$ 15,90</p>
+                            </div>
+                        </div>
+
+                        <div class="button">
+                            <div class="buttondec">
+                                <button class="l2 big decrementar" onclick="decrementar(this)">
+                                    -
+                                </button>
+                            </div>
+
+                            <div class="big valor">0</div>
+
+                            <div class="buttoninc">
+                                <button class="l2 big incrementar" onclick="incrementar(this)">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+                        
+
+                    </section> <!-- FIM DO PRATO PRINCIPAL-->
+
+                    <section class="optionMainCourse">
+                        <div class="option">
+                            <div class="optionInfo">
+                                <img src="img/bottle1L.jpeg" width="80px">
+                                <h2>Garrafa com 1 litro</h2>
+                                <h3>Beba com moderação</h3>
+                                <p>R$ 10,90</p>
+                            </div>
+                        </div>
+
+                        <div class="button">
+                            <div class="buttondec">
+                                <button class="l1 big decrementar" onclick="decrementar(this)">
+                                    -
+                                </button>
+                            </div>
+
+                            <div class="big valor">0</div>
+
+                            <div class="buttoninc">
+                                <button class="l1 big incrementar" onclick="incrementar(this)">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+                        
+
+                    </section> <!-- FIM DO PRATO PRINCIPAL-->
+
+                    <section class="optionMainCourse">
+                        <div class="option">
+                            <div class="optionInfo">
+                                <img src="img/bottle500mL.jpeg" width="80px">
+                                <h2>Garrafa com 500 mL</h2>
+                                <h3>Dois gole acaba</h3>
+                                <p>R$ 7,90</p>
+                            </div>
+                        </div>
+
+                        <div class="button">
+                            <div class="buttondec">
+                                <button class="l500 big decrementar" onclick="decrementar(this)">
+                                    -
+                                </button>
+                            </div>
+
+                            <div class="big valor">0</div>
+
+                            <div class="buttoninc">
+                                <button class="l500 big incrementar" onclick="incrementar(this)">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+                        
+
+                    </section> <!-- FIM DO PRATO PRINCIPAL-->
+
+                    <section class="optionMainCourse">
+                        <div class="option">
+                            <div class="optionInfo">
+                                <img src="img/bottle5L.jpeg" width="80px">
+                                <h2>Garrafa com 300 mL</h2>
+                                <h3>Da nem pro cheiro</h3>
+                                <p>R$ 5,90</p>
+                            </div>
+                        </div>
+
+                        <div class="button">
+                            <div class="buttondec">
+                                <button class="l300 big decrementar" onclick="decrementar(this)">
+                                    -
+                                </button>
+                            </div>
+
+                            <div class="big valor">0</div>
+
+                            <div class="buttoninc">
+                                <button class="l300 big incrementar" onclick="incrementar(this)">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+                        
+
+                    </section> <!-- FIM DO PRATO PRINCIPAL-->
+
+                    
+                </main>
+                <footer>
+                    <div class="finishedButton">
+                        <p>Selecione pelo menos uma garrafa de qualquer tamanho</p>                      
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <div class="secondLayer">
+
+        </div>
+        <div class="thirdLayer">
+
+        </div>
+
+        <script src="./script/script.js"></script>
+    </body>
+
+</html>

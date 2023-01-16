@@ -1,0 +1,205 @@
+body{
+    box-sizing: border-box;
+}
+
+.secondLayer, .thirdLayer{
+    display: none;
+}
+
+.site{
+    background-color: red;
+}
+
+header{
+    width: 414px;
+    height: 92px;
+    background-color: yellow;
+    position: fixed;
+    top: 0px;
+}
+
+/* .firstLayer{
+    width: 414px;
+} */
+
+header h1{
+    font-family: 'Righteous', cursive;
+    font-size: 44px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-left: 21px;
+    margin-top: 8px;
+}
+
+.big {
+    padding: 20px 25px;
+    margin: 0 10px;
+  }
+
+header h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-left: 21px;
+}
+
+main{
+    margin-top: 123px;
+    margin-bottom: 108px;
+    margin-left: 14px;
+}
+
+.optionMainCourse{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow-x: scroll; */
+}
+
+/* .optionMainCourse::-webkit-scrollbar {
+    display: none;
+} */
+
+.optionDrink{
+    display: flex;
+    overflow-x: scroll;
+}
+
+.optionDrink::-webkit-scrollbar {
+    display: none;
+}
+
+.optionDessert{
+    display: flex;
+    overflow-x: scroll;
+}
+
+.optionDessert::-webkit-scrollbar {
+    display: none;
+}
+
+section{
+    height: 258px;
+    width: 400px;
+    background-color: aqua;
+}
+
+.option{
+    /* width: 172px;
+    height: 216px; */
+    background-color: #ffffff;
+    border-radius: 9px;
+    margin-top: 17px;
+    margin-bottom: 17px;
+    margin-left: 16px;
+}
+
+.optionInfo{
+    width: 128px;
+}
+
+.valor {
+    font-size: 40px;
+    color: #343a40;
+  }
+
+  button:hover,
+.valor:hover {
+  filter: brightness(1.2);
+}
+
+  button {
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 63px;
+  }
+
+  .button{
+    display: flex;
+  }
+
+  .decrementar {
+    background-color: #dc3545;
+  }
+  
+  .incrementar {
+    background-color: #28a745;
+  }
+
+.optionInfo img{
+    margin-left: 14px;
+    margin-right: 14px;
+    /* margin-top: 14px; */
+    margin-bottom: 8px;
+}
+
+.optionInfo h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+    margin-left: 14px;
+}
+
+.optionInfo h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #333333;
+    margin-left: 14px;
+    margin-top: 4px;
+}
+
+.optionInfo p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    margin-left: 14px;
+    margin-top: 5px;
+}
+
+main h1{
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    font-weight: 400;
+    color: #333333;
+}
+
+section img{
+    border-radius: 4px;
+}
+
+footer{
+    background-color: green;
+    width: 414px;
+    height: 92px;
+    position: fixed;
+    bottom: 0px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.finishedButton{
+    width:364px ;
+    height: 61px;
+    background-color: blueviolet;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.finishedButton p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+}
