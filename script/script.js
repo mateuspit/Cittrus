@@ -95,4 +95,3 @@ function incrementar(thisInButton){
         enableButton.disabled = false;
     }
 }
-

@@ -19,8 +19,8 @@
         <div class="site">
             <div class="firstLayer">
                 <header>
-                    <h1>DrivenEats</h1>
-                    <h2>Sua comida em 6 minutos</h2>
+                    <img src="./img/LogoCittrusPNG.png" alt="Logo Cittrus" width="120px">
+                    <!-- <h2>Sua comida em 6 minutos</h2> -->
                 </header> <!--FIM DO MENU SUPERIOR-->
                 <main>
                     <h1>Escolha a garrafa que deseja:</h1>
@@ -116,7 +116,7 @@
                             <div class="optionInfo">
                                 <img src="img/bottle500mL.jpeg" width="80px">
                                 <h2>Garrafa com 500 mL</h2>
-                                <h3>Dois gole acaba</h3>
+                                <h3>Beba com moderação</h3>
                                 <p>R$ 7,90</p>
                             </div>
                         </div>
@@ -143,7 +143,7 @@
                     <section class="optionMainCourse">
                         <div class="option">
                             <div class="optionInfo">
-                                <img src="img/bottle5L.jpeg" width="80px">
+                                <img src="img/bottle300mL.jpeg" width="80px">
                                 <h2>Garrafa com 300 mL</h2>
                                 <h3>Da nem pro cheiro</h3>
                                 <p>R$ 5,90</p>
@@ -173,15 +173,43 @@
                 </main>
                 <footer>
                     <div class="finishedButton">
-                        <button disabled class="selectOrder">Selecione pelo menos uma garrafa de qualquer tamanho</button>                      
+                        <button onclick="showThirdLayer()" disabled class="selectOrder blackBackGroundColor">Selecione pelo menos uma garrafa de qualquer tamanho</button>                      
                     </div>
                 </footer>
             </div>
         </div>
-        <div class="secondLayer">
+        <div class="secondLayer hidden">
 
         </div>
-        <div class="thirdLayer">
+        <div class="thirdLayer hidden">
+
+            <div class="titleConfirmOrder">
+                Confirme seu pedido
+            </div>
+            <div class="priceOrder">
+                <div class="item">
+                    <p>Garrafa 5 L</p>
+                    <p>Garrafa 2 L</p>
+                    <p>Garrafa 1 L</p>
+                    <p>Garrafa 500 mL</p>
+                    <p>Garrafa 300 mL</p>
+                    <p class="total">TOTAL</p>
+                </div>
+                <div class="price">
+                    <p>55,55</p>
+                    <p>55,55</p>
+                    <p>55,55</p>
+                    <p>55,55</p>
+                    <p>55,55</p>
+                    <p class="total">55,55</p>
+                </div>
+            </div>
+            <div class="buttonFinishOrder">
+                Tudo certo, Pode
+            </div>
+            <div class="buttonCancelOrden">
+                
+            </div>
 
         </div>
 
