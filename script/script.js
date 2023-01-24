@@ -1,8 +1,19 @@
+const wappNumber = "+556284098615";
 let bottle5 = 0;
 let bottle2 = 0;
 let bottle1 = 0;
 let bottle500 = 0;
 let bottle300= 0;
+const bottleArrayPhrase = [ 
+    "5 litros.",
+    "2 litros.", 
+    "1 litro.", 
+    "500 mL.", 
+    "300 mL."
+ ]
+const bottleArrayPrice = [38,18,10,6,4];
+let globalBottleArrayNumber;
+let globalHowManyBottle;
 
 function decrementar(thisDecButton){
     const decButtonParent = thisDecButton.parentNode;
@@ -102,18 +113,50 @@ function incrementar(thisInButton){
     }
 }
 
+function finalizandoPedido(){
+    clientName = prompt("Qual o nome de quem receberá o pedido?");
+    clientTarget = prompt("Qual o endereço do pedido?");
+    let itemPrice = 0;
+    let urlencodedtext = "";
+    let total = 0;
+    let orderFinalMessage = 
+`Olá, gostaria de fazer o pedido:
+
+`;
+
+    for(let i = 0; i < globalHowManyBottle; i++){
+        itemPrice = (bottleArrayPrice[i]*globalBottleArrayNumber[i]).toFixed(2);   
+        itemPrice = Number(itemPrice);
+        total += itemPrice;  
+        if(globalBottleArrayNumber[i]){
+            orderFinalMessage += `- ${globalBottleArrayNumber[i]} Garrafa(s) de ${bottleArrayPhrase[i]}
+`;
+        }
+    }
+
+    total = total.toFixed(2);
+orderFinalMessage += `Total: R$ ${total}
+    
+Nome: ${clientName}
+Endereço: ${clientTarget}`;
+
+    // console.log(orderFinalMessage);
+
+    // https://wa.me/whatsappphonenumber?text=urlencodedtext
+    urlencodedtext = encodeURIComponent(orderFinalMessage);
+    // console.log(orderFinalMessage);
+    orderFinalMessage = `https://wa.me/${wappNumber}?text=${urlencodedtext}`
+    // console.log(orderFinalMessage);
+    window.location.href = orderFinalMessage;
+}
+
 function plotOrderResume(){
     const elementThirdLayer = document.querySelector(".thirdLayer");
     const howManyBottle = Boolean(bottle5) + Boolean(bottle2) + Boolean(bottle1) + Boolean(bottle500) + Boolean(bottle300);
     const bottleArrayNumber = [ bottle5, bottle2, bottle1, bottle500, bottle300 ]
-    const bottleArrayPhrase = [ 
-        "5 litros.",
-        "2 litros.", 
-        "1 litro.", 
-        "500 mL.", 
-        "300 mL."
-     ]
-    const bottleArrayPrice = [38,18,10,6,4];
+    globalBottleArrayNumber = bottleArrayNumber;
+    
+
 
     elementThirdLayer.innerHTML = `
     <div class="detailsOrder">
@@ -124,6 +167,7 @@ function plotOrderResume(){
 
     let itemPrice = 0;
 
+    globalHowManyBottle = howManyBottle;
     for(let i = 0; i < howManyBottle; i++){
         itemPrice = (bottleArrayPrice[i]*bottleArrayNumber[i]).toFixed(2);     
         if(bottleArrayNumber[i]){
@@ -158,7 +202,7 @@ function plotOrderResume(){
                     </div>
                 </div>
                 <div class="buttons">
-                    <div class="buttonMakeOrder">
+                    <div onclick="finalizandoPedido()" class="buttonMakeOrder">
                         Tudo certo, pode pedir!
                     </div>
                     <div onclick="cancelOrder()" class="buttonCancel">
