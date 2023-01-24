@@ -147,7 +147,10 @@ Endereço: ${clientTarget}`;
     // console.log(orderFinalMessage);
     orderFinalMessage = `https://wa.me/${wappNumber}?text=${urlencodedtext}`
     // console.log(orderFinalMessage);
-    window.location.href = orderFinalMessage;
+    // window.location.href = orderFinalMessage;
+    if((clientName != undefined) && (clientTarget != undefined)){
+        window.location.href = orderFinalMessage;
+    }
 }
 
 function plotOrderResume(){
