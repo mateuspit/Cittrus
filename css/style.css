@@ -2,12 +2,112 @@
     box-sizing: border-box;
 }
 
-.secondLayer, .thirdLayer{
-    display: none;
+body{
+    background-color: #e5e5e5;
 }
+
+.secondLayer{
+    position: fixed;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    opacity: 0.5;
+    top: 0px;
+    left: 0px;
+}
+
+.thirdLayer{
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    transform: translate(-50%, -50%);
+
+    width: 50vw;
+    height: 60vh;
+    background-color: #50d074;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* justify-content: center; */
+}
+
+.title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-left: 21px;    
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.item{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #ffffff;
+    /* margin-left: 21px;     */
+    text-align: center;
+    /* margin-top: 20px; */
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    width: 60vw;
+}
+
+
+
+.buttonMakeOrder{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #50d074; 
+    background-color: white;
+    border-radius: 100px;
+    width: 329px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonCancel{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: white; 
+    background-color: #50d074;
+    border-radius: 100px;
+    width: 329px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 5px; */
+}
+
+.total{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;  
+    display: flex;
+    justify-content: space-around;  
+    width: 60vw;
+}
+
+
 
 .site{
     background-color: #e5e5e5;
+    position: relative;
 }
 
 header{
@@ -27,8 +127,16 @@ header img{
 }
 
 /* .firstLayer{
-    width: 414px;
+    position: fixed; 
+    z-index: 3; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 } */
+
+.firstLayer{
+    position: relative;
+}
 
 header h1{
     font-family: 'Righteous', cursive;
@@ -121,7 +229,7 @@ section{
     filter: brightness(1.2);    
 }
 
-.finishedButton button {
+.finishedButton{
     border: 0;
     border-radius: 5px;
     color: white;
@@ -229,4 +337,8 @@ footer{
     font-weight: 400;
     color: #ffffff;
     text-align: center;
+}
+
+.hide {
+    display: none;
 }

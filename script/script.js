@@ -43,13 +43,13 @@ function decrementar(thisDecButton){
 
     // changeNumber.innerHTML = "T1";
 
-    if(bottle5 == 0 || bottle2 == 0 || bottle1 == 0 || bottle500 == 0 || bottle300 == 0){
+    if(bottle5 == 0 && bottle2 == 0 && bottle1 == 0 && bottle500 == 0 && bottle300 == 0){
         // console.log(document.querySelector(".selectOrder"));
         const disableButton = document.querySelector(".selectOrder");
         disableButton.disabled = true;
         disableButton.classList.add("unfinishedButton");
         disableButton.classList.remove("finishedButton");
-        
+        disableButton.innerHTML = "Selecione pelo menos uma garrafa de qualquer tamanho";        
     }
 }
 
@@ -96,8 +96,91 @@ function incrementar(thisInButton){
         // console.log(document.querySelector(".selectOrder"))
         const enableButton = document.querySelector(".selectOrder");
         enableButton.disabled = false;
-        console.log(enableButton);
         enableButton.classList.add("finishedButton");
         enableButton.classList.remove("unfinishedButton");
+        enableButton.innerHTML = "Fechar pedido!";
     }
+}
+
+function plotOrderResume(){
+    const elementThirdLayer = document.querySelector(".thirdLayer");
+    const howManyBottle = Boolean(bottle5) + Boolean(bottle2) + Boolean(bottle1) + Boolean(bottle500) + Boolean(bottle300);
+    const bottleArrayNumber = [ bottle5, bottle2, bottle1, bottle500, bottle300 ]
+    const bottleArrayPhrase = [ 
+        "5 litros.",
+        "2 litros.", 
+        "1 litro.", 
+        "500 mL.", 
+        "300 mL."
+     ]
+    const bottleArrayPrice = [38,18,10,6,4];
+
+    elementThirdLayer.innerHTML = `
+    <div class="detailsOrder">
+        <div class="title">
+            Confirmar seu pedido
+        </div>
+    `;
+
+    let itemPrice = 0;
+
+    for(let i = 0; i < howManyBottle; i++){
+        itemPrice = (bottleArrayPrice[i]*bottleArrayNumber[i]).toFixed(2);     
+        if(bottleArrayNumber[i]){
+            elementThirdLayer.innerHTML += `
+                    <div class="item">
+                        <div class="itemText">
+                        ${bottleArrayNumber[i]} Garrafa(s) de ${bottleArrayPhrase[i]}
+                        </div>
+                        <div class="itemPrice">
+                            R$ ${itemPrice}
+                        </div>
+                    </div>
+            `;
+        }
+    }
+
+    let totalPrice = 0;
+    for(let i = 0; i < howManyBottle; i++){
+        totalPrice += bottleArrayPrice[i]*bottleArrayNumber[i];
+    }
+
+    totalPrice = 
+
+    elementThirdLayer.innerHTML += `
+                    <div class="total">
+                        <div class="totalText">
+                            TOTAL
+                        </div>
+                        <div class="totalPrice">
+                        R$ ${totalPrice.toFixed(2)}                        
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <div class="buttonMakeOrder">
+                        Tudo certo, pode pedir!
+                    </div>
+                    <div onclick="cancelOrder()" class="buttonCancel">
+                        Cancelar
+                    </div>     
+                </div> 
+
+    `;
+}
+
+function showOthersLayers(){
+    const elementSecondLayer = document.querySelector(".secondLayer");
+    elementSecondLayer.classList.remove("hide");
+    const elementThirdLayer = document.querySelector(".thirdLayer");
+    elementThirdLayer.classList.remove("hide");
+
+    plotOrderResume();
+}
+
+function cancelOrder(){
+    const elementSecondLayer = document.querySelector(".secondLayer");
+    elementSecondLayer.classList.add("hide");
+    const elementThirdLayer = document.querySelector(".thirdLayer");
+    elementThirdLayer.classList.add("hide");    
 }
