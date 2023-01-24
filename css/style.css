@@ -25,8 +25,8 @@ body{
     margin: auto;
     transform: translate(-50%, -50%);
 
-    width: 50vw;
-    height: 60vh;
+    width: 90vw;
+    height: 70vh;
     background-color: #50d074;
     border-radius: 9px;
     display: flex;
