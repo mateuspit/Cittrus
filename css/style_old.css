@@ -1,4 +1,4 @@
-* {
+body{
     box-sizing: border-box;
 }
 
@@ -7,23 +7,15 @@
 }
 
 .site{
-    background-color: #e5e5e5;
+    background-color: red;
 }
 
 header{
-    width: 100vw;
+    width: 414px;
     height: 92px;
-    background-color: orange;
+    background-color: yellow;
     position: fixed;
     top: 0px;
-    left: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-header img{
-    margin-top: 10px;
 }
 
 /* .firstLayer{
@@ -56,9 +48,6 @@ main{
     margin-top: 123px;
     margin-bottom: 108px;
     margin-left: 14px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .optionMainCourse{
@@ -93,7 +82,7 @@ main{
 section{
     height: 258px;
     width: 400px;
-    background-color: #e5e5e5;
+    background-color: aqua;
 }
 
 .option{
@@ -115,34 +104,18 @@ section{
     color: #343a40;
   }
 
-
-
-.finishedButton button:hover{
-    filter: brightness(1.2);    
+  button:hover,
+.valor:hover {
+  filter: brightness(1.2);
 }
 
-.finishedButton button {
+  button {
     border: 0;
     border-radius: 5px;
     color: white;
-    background-color: #32b72f;
     font-size: 20px;
     font-weight: bold;
-    width: 364px;
-    height: 61px;
-    border-radius: 50px;
-  }
-
-  .unfinishedButton{
-    border: 0;
-    border-radius: 5px;
-    color: white;
-    background-color: #cbcbcb;
-    font-size: 20px;
-    font-weight: bold;
-    width: 364px;
-    height: 61px;
-    border-radius: 50px;
+    width: 63px;
   }
 
   .button{
@@ -202,8 +175,8 @@ section img{
 }
 
 footer{
-    background-color: white;
-    width: 100vw;
+    background-color: green;
+    width: 414px;
     height: 92px;
     position: fixed;
     bottom: 0px;
@@ -213,7 +186,7 @@ footer{
     align-items: center;
 }
 
-/* .finishedButton{
+.finishedButton{
     width:364px ;
     height: 61px;
     background-color: blueviolet;
@@ -221,7 +194,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;    
-} */
+}
 
 .finishedButton p{
     font-family: 'Roboto', sans-serif;
